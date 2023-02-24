@@ -22,8 +22,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --passWithNoTests",
     "eject": "react-scripts eject",
+    "test:coverage": "react-scripts test --coverage --watchAll=false --passWithNoTests",
     "prepare": "husky install"
   },
   "eslintConfig": {
@@ -48,5 +49,13 @@
     "eslint-config-prettier": "^8.6.0",
     "husky": "^8.0.0",
     "prettier": "2.8.4"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "src/**/*.tsx",
+      "!src/index.tsx",
+      "!src/react-app-env.d.ts"
+    ]
   }
 }
