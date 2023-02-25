@@ -12,6 +12,7 @@ const LoginForm = (): JSX.Element => {
               type="text"
               className="form__name-input"
               placeholder="username"
+              aria-label="username"
             ></input>
           </label>
           <label htmlFor="name" className="form__password-label">
@@ -20,6 +21,7 @@ const LoginForm = (): JSX.Element => {
               type="text"
               className="form__password-input"
               placeholder="password"
+              aria-label="password"
             ></input>
           </label>
           <button>Log in</button>

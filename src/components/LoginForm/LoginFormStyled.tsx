@@ -43,6 +43,7 @@ const LoginFormStyled = styled.div`
       border-radius: 15px;
       background-color: #01051c;
       border: 1px solid #2dd5eb;
+      font-size: 17px;
       color: white;
     }
 
@@ -62,6 +63,7 @@ const LoginFormStyled = styled.div`
       border-radius: 15px;
       background-color: #01051c;
       border: 1px solid #2dd5eb;
+      font-size: 17px;
       color: white;
     }
 
@@ -87,11 +89,11 @@ const LoginFormStyled = styled.div`
 
     .form {
       &__name-input {
-        width: 250px;
+        width: 400px;
       }
 
       &__password-input {
-        width: 250px;
+        width: 400px;
       }
     }
   }
