@@ -8,3 +8,5 @@ export interface UsersDataStructure {
   friends: {};
   isLogged: boolean;
 }
+
+export type UsersDataListStructure = UsersDataStructure[];
