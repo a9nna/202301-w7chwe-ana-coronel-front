@@ -1,12 +1,18 @@
-export interface UsersDataStructure {
-  id: string;
+export interface UserApiDataStructure {
   image: string;
   username: string;
-  password: string;
-  email: string;
-  enemies: {};
-  friends: {};
+  enemies: [];
+  friends: [];
+}
+export interface UserDataStructure extends UserApiDataStructure {
   isLogged: boolean;
 }
 
-export type UsersDataListStructure = UsersDataStructure[];
+export interface UserStructure extends UserApiDataStructure {
+  isFriend: boolean;
+  isEnemy: boolean;
+}
+
+export type UsersListApiDataStructure = UserApiDataStructure[];
+export type UsersListStructure = UserStructure[];
+export type UsersDataListStructure = UserDataStructure[];
