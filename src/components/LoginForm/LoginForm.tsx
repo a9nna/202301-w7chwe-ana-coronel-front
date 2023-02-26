@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import LoginFormStyled from "./LoginFormStyled";
 
 const LoginForm = (): JSX.Element => {
@@ -15,7 +16,7 @@ const LoginForm = (): JSX.Element => {
               aria-label="username"
             ></input>
           </label>
-          <label htmlFor="name" className="form__password-label">
+          <label htmlFor="password" className="form__password-label">
             <span className="form__password-title"> Password </span>
             <input
               type="text"
@@ -24,7 +25,10 @@ const LoginForm = (): JSX.Element => {
               aria-label="password"
             ></input>
           </label>
-          <button>Log in</button>
+          <div className="form__action-buttons">
+            <a href="login">Log in</a>
+            <Link to={`create-user`}>Sign in</Link>
+          </div>
         </form>
       </>
     </LoginFormStyled>

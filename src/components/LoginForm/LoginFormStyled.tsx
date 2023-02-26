@@ -8,8 +8,8 @@ const LoginFormStyled = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
-  height: 500px;
+  width: 80vw;
+  height: 700px;
   background-color: #01051c;
   border: 3px solid #2dd5eb;
   border-radius: 15px;
@@ -67,12 +67,20 @@ const LoginFormStyled = styled.div`
       color: white;
     }
 
-    & button {
+    &__action-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      margin-top: 10px;
+    }
+
+    & a {
       width: 150px;
       padding: 15px;
       font-weight: 600;
       font-size: large;
       border-radius: 12px;
+      text-align: center;
       background-color: #2dd5eb;
       border: 1px solid #2dd5eb;
       color: #01051c;
@@ -84,16 +92,23 @@ const LoginFormStyled = styled.div`
     }
   }
 
-  @media (min-width: 400px) {
-    width: 600px;
-
+  @media (min-width: 730px) {
     .form {
       &__name-input {
-        width: 400px;
+        width: 500px;
       }
 
       &__password-input {
-        width: 400px;
+        width: 500px;
+      }
+
+      &__action-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+        margin: 0;
+        width: 100%;
       }
     }
   }
