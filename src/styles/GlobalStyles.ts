@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
 
 *, ::before, ::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -29,8 +29,8 @@ input, button {
 }
 
 a, a:focus, a:active, a:visited {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 `;
