@@ -1,10 +1,10 @@
-import LoginForm from "../LoginForm/LoginForm";
+import { Outlet } from "react-router-dom";
 
 const Layout = (): JSX.Element => {
   return (
     <>
       <main>
-        <LoginForm />
+        <Outlet />
       </main>
     </>
   );

@@ -1,12 +1,16 @@
 import { render, screen } from "@testing-library/react";
-import LoginForm from "./LoginForm";
+import { createMemoryRouter, RouterProvider } from "react-router-dom";
+import { routes } from "../../pages/router/router";
 
 describe("Given a LoginForm component", () => {
   describe("When its rendered", () => {
     test("Then it should show an imput with text 'username'", () => {
       const expectedName = "username";
 
-      render(<LoginForm />);
+      const router = createMemoryRouter(routes, {
+        initialEntries: ["/"],
+      });
+      render(<RouterProvider router={router} />);
 
       const name = screen.getByRole("textbox", {
         name: expectedName,
@@ -18,7 +22,10 @@ describe("Given a LoginForm component", () => {
     test("Then it should show an imput with text 'password'", () => {
       const expectedName = "password";
 
-      render(<LoginForm />);
+      const router = createMemoryRouter(routes, {
+        initialEntries: ["/"],
+      });
+      render(<RouterProvider router={router} />);
 
       const name = screen.getByRole("textbox", {
         name: expectedName,

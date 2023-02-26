@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 
-* {
+*, ::before, ::after {
   box-sizing: border-box;
 }
 
@@ -26,6 +26,11 @@ input, button {
   font-family: inherit;
   cursor: pointer;
   border: none;
+}
+
+a, a:focus, a:active, a:visited {
+  color: inherit;
+  text-decoration: none;
 }
 
 `;
