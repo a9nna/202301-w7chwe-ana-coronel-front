@@ -1,6 +1,7 @@
 export interface UserApiDataStructure {
-  image: string;
   username: string;
+  password: string;
+  email: string;
   enemies: [];
   friends: [];
 }

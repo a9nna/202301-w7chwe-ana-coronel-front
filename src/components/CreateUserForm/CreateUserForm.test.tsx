@@ -1,6 +1,8 @@
 import { render, screen } from "@testing-library/react";
+import { Provider } from "react-redux";
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import { routes } from "../../pages/router/router";
+import { store } from "../../store";
 
 describe("Given a CreateUserForm component", () => {
   describe("When its rendered", () => {
@@ -10,7 +12,11 @@ describe("Given a CreateUserForm component", () => {
       const router = createMemoryRouter(routes, {
         initialEntries: ["/create-user"],
       });
-      render(<RouterProvider router={router} />);
+      render(
+        <Provider store={store}>
+          <RouterProvider router={router} />
+        </Provider>
+      );
 
       const name = screen.getByRole("textbox", {
         name: expectedName,
@@ -25,7 +31,11 @@ describe("Given a CreateUserForm component", () => {
       const router = createMemoryRouter(routes, {
         initialEntries: ["/create-user"],
       });
-      render(<RouterProvider router={router} />);
+      render(
+        <Provider store={store}>
+          <RouterProvider router={router} />
+        </Provider>
+      );
 
       const name = screen.getByRole("textbox", {
         name: expectedName,
@@ -40,22 +50,11 @@ describe("Given a CreateUserForm component", () => {
       const router = createMemoryRouter(routes, {
         initialEntries: ["/create-user"],
       });
-      render(<RouterProvider router={router} />);
-
-      const name = screen.getByRole("textbox", {
-        name: expectedName,
-      });
-
-      expect(name).toBeInTheDocument();
-    });
-
-    test("Then it should show an imput with text 'image'", () => {
-      const expectedName = "image";
-
-      const router = createMemoryRouter(routes, {
-        initialEntries: ["/create-user"],
-      });
-      render(<RouterProvider router={router} />);
+      render(
+        <Provider store={store}>
+          <RouterProvider router={router} />
+        </Provider>
+      );
 
       const name = screen.getByRole("textbox", {
         name: expectedName,
@@ -70,9 +69,13 @@ describe("Given a CreateUserForm component", () => {
       const router = createMemoryRouter(routes, {
         initialEntries: ["/create-user"],
       });
-      render(<RouterProvider router={router} />);
+      render(
+        <Provider store={store}>
+          <RouterProvider router={router} />
+        </Provider>
+      );
 
-      const name = screen.getByRole("link", {
+      const name = screen.getByRole("button", {
         name: expectedName,
       });
 
