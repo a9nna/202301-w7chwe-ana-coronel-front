@@ -1,9 +1,10 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { UserDataStructure, UserApiDataStructure } from "../../../types";
+import { createSlice } from "@reduxjs/toolkit";
+import { UserDataStructure } from "../../../types";
 
 const initialUserState: UserDataStructure = {
-  image: "",
   username: "",
+  password: "",
+  email: "",
   enemies: [],
   friends: [],
   isLogged: false,
@@ -13,12 +14,8 @@ const userSlice = createSlice({
   name: "user",
   initialState: initialUserState,
   reducers: {
-    createUser: (
-      currentUserState: UserDataStructure,
-      action: PayloadAction<UserApiDataStructure>
-    ): UserDataStructure => ({
+    createUser: (currentUserState: UserDataStructure): UserDataStructure => ({
       ...currentUserState,
-      ...action.payload,
       isLogged: true,
     }),
   },

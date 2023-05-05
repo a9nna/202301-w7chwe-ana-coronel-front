@@ -110,13 +110,38 @@ const CreateUserFormStyled = styled.div`
       width: 70vw;
       padding: 20px;
       border-radius: 15px;
-      background-color: #01051c;
+      background-color: #2dd5eb;
       border: 1px solid #2dd5eb;
       font-size: 17px;
-      color: white;
+      color: #01051c;
+
+      &:hover {
+        color: #2dd5eb;
+        background-color: #01051c;
+      }
+
+      &::-webkit-file-upload-button {
+        visibility: hidden;
+        width: 2vw;
+      }
+      &::before {
+        content: "Select file";
+        color: #01051c;
+        font-weight: 600;
+        background-color: #2dd5eb;
+        border-radius: 12px;
+        padding: 10px;
+      }
+
+      &:hover {
+        &::before {
+          color: #2dd5eb;
+          background-color: #01051c;
+        }
+      }
     }
 
-    & a {
+    & button {
       width: 70vw;
       padding: 15px;
       margin-top: 30px;
